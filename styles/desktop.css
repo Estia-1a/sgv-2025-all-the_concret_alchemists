@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    color: black;
+}
+
+header {
+    background-color: skyblue;
+    color: white;
+    padding: 0 20px;
+    height: 60px;
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
