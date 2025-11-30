@@ -1,13 +1,61 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
 p {
     color: red;
 }
 
-.correction p {
-    color: green;
-    text-size-adjust: 150%;
+h1 {
+    margin: 0;
+
 }
 
+.correction p {
+    color: green;
+    font-size: 15px;
+}
 
+.titre {
+    width: 100%;
+    background-image: url("image/Genie_logiciel.jpg");
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    padding-left: 20px;
+
+}
+
+.titre h1 {
+    color: white;
+}
+
+.titre p {
+    color: white;
+}
+
+.titre img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.objectif {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 40px;
+    gap: 80px;
+}
+
+.objectif div {
+    width: 40%;
+}
 
 input {
     padding: 30px;
