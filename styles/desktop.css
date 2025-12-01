@@ -16,3 +16,34 @@ header {
     align-items: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
+h1 { display: block; font-weight: bold; margin: 5px 0; }
+a { text-decoration: none; color: inherit; }
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    color: black;
+}
+
+.contenu-page {
+    display: flex;   
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.Barre-latérale {
+    width: 200px;
+    background-color: white;
+    border-right: 3px solid skyblue;
+    color : black;
+    display: flex;
+    align-items: stretch;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
