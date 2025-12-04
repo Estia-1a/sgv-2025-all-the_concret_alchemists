@@ -1,0 +1,205 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    border-bottom: 1px solid black;
+}
+
+.crumbs ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.crumb {
+    display: inline-block;
+}
+
+.crumb a::after {
+    display: inline-block;
+    color: #000;
+    content: ">";
+    font-size: 80%;
+    font-weight: bold;
+    padding: 0 3px;
+}
+
+p {
+    color: black;
+}
+
+h1 {
+    margin: 0;
+
+}
+
+.correction p {
+    color: green;
+    font-size: 20px;
+}
+
+.correction {
+    margin: 40px;
+    gap: 80px;
+}
+
+.titre {
+    width: 100%;
+    background-image: url("image\Genie_logiciel.jpg");
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    padding-left: 20px;
+
+}
+
+.titre h1 {
+    color: white;
+}
+
+.titre p {
+    color: white;
+}
+
+.titre img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.objectif {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 40px;
+    gap: 80px;
+}
+
+.objectif div {
+    width: 40%;
+}
+
+.cours div {
+    width: 40%;
+}
+
+.cours {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 40px;
+    gap: 80px;
+}
+
+input {
+    padding: 100px;
+}
+
+.exercice {
+    width: 40%;
+    margin: 40px;
+    gap: 80px;
+}
+
+.exo {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 40px;
+    gap: 80px;
+    align-items: center
+}
+
+:root {
+    --accent: green;
+    /* couleur principale */
+    --accent-dark: rgb(2, 95, 2);
+    --bg: #ffffff;
+    --text: #fff;
+    --radius: 10px;
+    --shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    /* centre horizontalement */
+    padding: 16px 12px;
+}
+
+/* Le gros bouton */
+.btn-large {
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    background: linear-gradient(180deg, var(--accent), var(--accent-dark));
+    color: var(--text);
+    font-family: Inter, Roboto, Arial, sans-serif;
+    font-size: 1.125rem;
+    /* 18px environ */
+    font-weight: 600;
+    padding: 16px 28px;
+    /* hauteur + largeur intérieure */
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: transform .12s ease, box-shadow .12s ease, filter .12s ease;
+    width: 100%;
+    /* mobile : plein largeur */
+    max-width: 420px;
+    /* desktop : limite la largeur */
+    text-align: center;
+    display: inline-block;
+    line-height: 1;
+}
+
+/* Hover / active */
+.btn-large:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.03);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.16);
+}
+
+.btn-large:active {
+    transform: translateY(-1px) scale(.998);
+}
+
+/* Focus (accessibilité) */
+.btn-large:focus {
+    outline: 3px solid rgba(0, 123, 255, 0.18);
+    outline-offset: 4px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+}
+
+/* Variante "outline" si tu veux un style alternatif */
+.btn-large.outline {
+    background: transparent;
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    box-shadow: none;
+}
+
+/* Responsive tweaks (optionnel) */
+@media (min-width: 900px) {
+    .btn-wrapper {
+        padding: 24px 0;
+    }
+
+    .btn-large {
+        font-size: 1.125rem;
+        padding: 18px 36px;
+    }
+}
+
+. @media screen and (max-width:500px) {
+    p {
+        color: blue;
+    }
+
+    test {}
+}
