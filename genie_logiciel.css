@@ -1,0 +1,22 @@
+p {
+    color: red;
+}
+
+.correction p {
+    color: green;
+    text-size-adjust: 150%;
+}
+
+
+
+input {
+    padding: 30px;
+}
+
+@media screen and (max-width:500px) {
+    p {
+        color: blue;
+    }
+
+    test {}
+}
