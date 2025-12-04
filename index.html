@@ -58,7 +58,7 @@
         <button type="entrée">🔍</button>
     </div>
 
-    <a href="genie_logiciel.html"> lien vers genie_logiciel</a>
+
 </body>
 
 </html>
@@ -92,12 +92,21 @@
     </div>
   </a>
 
-  <a href="#" class="cours-card">
+  <a href="genie_logiciel.html" class="cours-card">
     <img src="https://via.placeholder.com/150" alt="Illustration matière">
-    <h3>Génie logiciel</h3>
+    <h3>Genie logiciel</h3>
 
     <div class="progress-track">
       <div class="progress-bar" data-progress="85"></div>
     </div>
   </a>
 </div>
+
+<script>
+  document.querySelectorAll('.progress-bar').forEach(bar => {
+    const target = bar.getAttribute('data-progress');
+    setTimeout(() => {
+      bar.style.width = target + "%";
+    }, 400);
+  });
+</script>
