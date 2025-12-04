@@ -27,6 +27,10 @@ p {
     text-align: justify;
 }
 
+ul {
+    padding-left: 20px;
+}
+
 nav {
     width: 100%;
     border-bottom: 1px solid #ccc;
@@ -260,8 +264,167 @@ textarea {
     box-shadow: none;
 }
 
+/* Tablette */
+@media (max-width: 1024px) {
+    main {
+        width: 90%;
+        gap: 56px;
+        padding-top: 60px;
+    }
+
+    .section {
+        gap: 32px;
+        margin: 48px auto;
+    }
+
+    .img-section {
+        width: 45%;
+    }
+
+    .objectif,
+    .cours,
+    .exo {
+        gap: 40px;
+    }
+
+    .exercice {
+        width: 70%;
+    }
+}
+
+/* Mobile / petite tablette */
+@media (max-width: 768px) {
+    main {
+        width: 92%;
+        padding-top: 40px;
+        gap: 44px;
+    }
+
+    nav {
+        padding: 10px 14px;
+    }
+
+    /* Breadcrumb qui peut passer à la ligne */
+    .crumbs ol {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .crumb {
+        display: inline-block;
+        /* évite les surprises avec inline + wrap */
+    }
+
+    /* Bandeau titre */
+    .titre {
+        height: 260px;
+        padding: 18px;
+    }
+
+    .titre h1 {
+        font-size: 2rem;
+    }
+
+    .titre p {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    /* Sections en colonne */
+    .section {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 22px;
+        margin: 36px auto;
+        padding: 0 12px;
+    }
+
+    .section:nth-child(even) {
+        flex-direction: column;
+        /* annule le row-reverse sur mobile */
+    }
+
+    /* Images pleine largeur */
+    .img-section {
+        width: 100%;
+        display: block;
+        height: auto;
+        max-height: 280px;
+        object-fit: cover;
+    }
+
+    /* Blocs Objectif / Cours / Exo en colonne + largeur 100% */
+    .objectif,
+    .cours,
+    .exo {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+    }
+
+    .objectif>*,
+    .cours>*,
+    .exo>* {
+        width: 100% !important;
+    }
+
+    /* Exercice pleine largeur */
+    .exercice {
+        width: 100%;
+    }
+
+    /* Texte + formulaire */
+    textarea {
+        font-size: 1rem;
+        min-height: 160px;
+    }
+
+    .btn-wrapper {
+        padding: 12px 0;
+    }
+
+    .btn-large {
+        max-width: 100%;
+    }
+}
+
+/* Très petit mobile */
+@media (max-width: 480px) {
+    main {
+        width: 90%;
+        gap: 36px;
+    }
+
+    .titre {
+        height: 220px;
+    }
+
+    .titre h1 {
+        font-size: 1.6rem;
+    }
+
+    .titre p {
+        display: none;
+    }
+
+    .crumb {
+        font-size: 0.85rem;
+    }
+
+    .correction details {
+        padding: 14px;
+    }
+
+    textarea {
+        padding: 12px;
+    }
+}
+
+
 /* Responsive tweaks (optionnel) */
-@media (min-width: 900px) {
+/*@media (min-width: 900px) {
     .btn-wrapper {
         padding: 24px 0;
     }
@@ -281,7 +444,7 @@ textarea {
     }
 
     test {}
-}*/
+}
 @media (max-width: 850px) {
     .section {
         flex-direction: column;
@@ -306,4 +469,4 @@ textarea {
     .titre h1 {
         font-size: 2.2rem;
     }
-}
+}*/
