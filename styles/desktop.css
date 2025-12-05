@@ -79,3 +79,163 @@ nav {
   font-weight: bold;
   padding: 0 3px;
 }
+
+/* --- RESET GÉNÉRAL --- */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* --- HEADER / TITRE --- */
+.titre {
+    background-color: #0f6cca; /* Bleu Moodle */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h { font-size: 1.5rem; font-weight: bold; display: block;}
+
+.boutons a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 0.9rem;
+}
+
+/* --- FIL D'ARIANE (Crumbs) --- */
+.crumbs {
+    background: white;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9rem;
+}
+.crumbs ol { list-style: none; padding: 0; margin: 0; display: flex; }
+.crumbs li { margin-right: 10px; }
+.crumbs li::after { content: "/"; margin-left: 10px; color: #ccc; }
+.crumbs li:last-child::after { content: ""; } /* Enlève le / à la fin */
+
+/* --- INTRO --- */
+.intro {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-left: 5px solid #0f6cca;
+}
+
+/* --- LAYOUT PRINCIPAL (Menu à gauche / Cours à droite) --- */
+.container {
+    display: flex; /* C'est ça qui met les éléments côte à côte */
+    padding: 0 20px 40px 20px;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* --- MENU LATÉRAL --- */
+.Menu {
+    width: 250px;
+    min-width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    height: fit-content;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.menu-lateral ul { list-style: none; padding: 0; }
+.menu-lateral li { margin-bottom: 10px; }
+.menu-lateral a {
+    text-decoration: none;
+    color: #555;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+}
+.menu-lateral a:hover, .menu-lateral a.actif {
+    background-color: #eef5fb;
+    color: #0f6cca;
+    font-weight: bold;
+}
+
+
+.zone-cours {
+    flex: 1; /* Prend tout l'espace restant */
+}
+
+
+.barre-recherche {
+    display: flex;
+    margin-bottom: 20px;
+}
+.barre-recherche input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+.barre-recherche button {
+    padding: 10px 20px;
+    background: #0f6cca;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+
+.grille-cours {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+}
+
+.carte {
+    background: white;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    position: relative;
+    border-top: 5px solid #0f6cca; /* La petite barre de couleur */
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.carte:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.contenu { padding: 20px; display: flex; flex-direction: column; height: 100%; }
+
+.titre-cours { margin-top: 0; color: #0f6cca; }
+
+.description { font-size: 0.9rem; color: #666; margin-bottom: 20px; flex-grow: 1; }
+
+/* Boutons de la carte */
+.btn-acces {
+    background-color: #0f6cca;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+.btn-acces:hover { background-color: #0a4b90; }
+
+.btn-prof {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
