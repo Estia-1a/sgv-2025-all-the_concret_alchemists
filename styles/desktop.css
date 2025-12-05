@@ -1,6 +1,4 @@
-/* ---------------------- */
-/* RESET DE BASE          */
-/* ---------------------- */
+
 * {
     margin: 0;
     padding: 0;
@@ -15,9 +13,7 @@ body {
     padding: 20px;
 }
 
-/* ---------------------- */
-/* BREADCRUMBS            */
-/* ---------------------- */
+
 .breadcrumbs {
     margin-bottom: 15px;
 }
@@ -45,9 +41,7 @@ body {
     content: "";
 }
 
-/* ---------------------- */
-/* HEADER                 */
-/* ---------------------- */
+
 .page-header {
     display: flex;
     justify-content: space-between;
@@ -90,9 +84,7 @@ body {
     height: 18px;
 }
 
-/* ---------------------- */
-/* INTRO                  */
-/* ---------------------- */
+
 .intro {
     background: #ffffff;
     padding: 16px;
@@ -101,9 +93,7 @@ body {
     margin-bottom: 25px;
 }
 
-/* ---------------------- */
-/* SIDE MENU              */
-/* ---------------------- */
+
 .side-menu {
     background: #ffffff;
     padding: 16px;
