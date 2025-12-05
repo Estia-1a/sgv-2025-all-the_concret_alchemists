@@ -5,108 +5,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
     <link rel="stylesheet" href="styles/desktop.css" media="screen and (min-width: 768px)">
     <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 767px)">
     <link rel="stylesheet" href="style.css">
+
     <title>ESTI'APPRENDRE</title>
-
-
 </head>
-<nav class="crumbs">
-    <ol>
-        <li class="crumb"><a href="#">Acceuil</a></li>
-        <li class="crumb">Mes cours</li>
-    </ol>
-</nav>
-<div class="titre">
-<div class="boutons">
-    <button>
-        <img src="https://cdn-icons-png.flaticon.com/512/3524/3524636.png" alt="paramètres">
-    Paramètres
-    </button>
-    <button> <img src="https://cdn-icons-png.flaticon.com/512/1828/1828479.png" alt="déconnexion">
-    Déconnexion
-    </button>
-        
-</div>
-<h> 
-    ESTI'APPRENDRE
 
-</h>
-</div>
-<div class="intro">
-<p> Bienvenue sur le site ESTI'APPRENDRE, une plateforme dédiée à l'apprentissage et au partage de connaissances. Notre
-    objectif est de fournir des ressources éducatives de qualité pour aider les étudiants et les professionnels à
-    atteindre leurs objectifs d'apprentissage. Explorez nos cours, tutoriels et articles pour enrichir vos compétences
-    et découvrir de nouvelles perspectives. Bonne navigation ! </p>
-</div>
 <body>
-    <h2>
-        Mes cours
-    </h2>
-<div class="menu"></div>
-    <h1>Menus</h1>
-    <ul>
-        <li><a href="#" target="_blank">Profil</a></li>
-        <li><a href="#" target="_blank">Mes cours</a></li>
-        <li><a href="#" target="_blank">Conversations</a></li>
-        <li><a href="#" target="_blank">Gérer mon abonnement</a></li>
-    </ul>
-</div>
-    <div class="barre de recherche">
-        <input type="text" placeholder="Rechercher...">
-        <button type="entrée">🔍</button>
+
+    <nav class="breadcrumbs">
+        <ol>
+            <li><a href="#">Accueil</a></li>
+            <li>Mes cours</li>
+        </ol>
+    </nav>
+
+
+    <header class="page-header">
+        <h1>ESTI'APPRENDRE</h1>
+
+        <div class="header-buttons">
+            <button>
+                <img src="https://cdn-icons-png.flaticon.com/512/3524/3524636.png" alt="paramètres">
+                Paramètres
+            </button>
+
+            <button>
+                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828479.png" alt="déconnexion">
+                Déconnexion
+            </button>
+        </div>
+    </header>
+
+
+    <section class="intro">
+        <h2 class="visu caché">Bienvenue sur le site ESTI'APPRENDRE</h2> 
+        <p>
+             une plateforme dédiée à l'apprentissage et au partage de connaissances.
+            Explorez nos cours, tutoriels et articles pour enrichir vos compétences et découvrir de nouvelles perspectives.
+            Bonne navigation !
+        </p>
+    </section>
+
+
+    <aside class="side-menu">
+        <h2>Menus</h2>
+        <ul>
+            <li><a href="#">Profil</a></li>
+            <li><a href="#">Mes cours</a></li>
+            <li><a href="#">Conversations</a></li>
+            <li><a href="#">Gérer mon abonnement</a></li>
+        </ul>
+
+    </aside>
+
+    <main>
+        <h2>Mes cours</h2>
+           <div class="search-box">
+            <input type="text" placeholder="Rechercher...">
+            <button>🔍</button>
+        </div>
+
+        <div class="cours-container">
+
+            <a href="#" class="cours-card">
+                <img src="https://via.placeholder.com/150" alt="Illustration matière">
+                <h3>Équations de la physique</h3>
+                <div class="progress-track">
+                    <div class="progress-bar" data-progress="70"></div>
+                </div>
+            </a>
+
+            <a href="#" class="cours-card">
+                <img src="https://via.placeholder.com/150" alt="Illustration matière">
+                <h3>Mécanique</h3>
+                <div class="progress-track">
+                    <div class="progress-bar" data-progress="40"></div>
+                </div>
+            </a>
+
+            <a href="#" class="cours-card">
+                <img src="https://via.placeholder.com/150" alt="Illustration matière">
+                <h3>Résistances des matériaux</h3>
+                <div class="progress-track">
+                    <div class="progress-bar" data-progress="85"></div>
+                </div>
+            </a>
+
+            <a href="genie_logiciel.html" class="cours-card">
+                <img src="https://via.placeholder.com/150" alt="Illustration matière">
+                <h3>Génie logiciel</h3>
+                <div class="progress-track">
+                    <div class="progress-bar" data-progress="85"></div>
+                </div>
+            </a>
+
+        </div>
+    </main>
+
+    <script>
+        document.querySelectorAll('.progress-bar').forEach(bar => {
+            const target = bar.getAttribute('data-progress');
+            setTimeout(() => {
+                bar.style.width = target + "%";
+            }, 400);
+        });
+    </script>
+
+
+
+<aside class="right-panel">
+  
+  <div class="profil-card">
+
+    <div class="profil-header">
+      <img src="https://via.placeholder.com/80" alt="Photo étudiant">
+      <div>
+        <h3>Jean Dupont</h3>
+        <p>CI1A – 1ère année</p>
+      </div>
     </div>
+
+    <h4>Niveau global</h4>
+
+
+    <div class="radar-chart">
+      <svg viewBox="0 0 200 200">
+        
+
+        <polygon points="100,20 180,60 160,160 40,160 20,60" class="grid"></polygon>
+        <polygon points="100,40 160,80 140,140 60,140 40,80" class="grid"></polygon>
+        <polygon points="100,60 140,95 125,125 75,125 60,95" class="grid"></polygon>
+
+
+        <text x="100" y="10" class="axis-label">Maths</text>
+        <text x="185" y="65" class="axis-label">Physique</text>
+        <text x="165" y="175" class="axis-label">Méca</text>
+        <text x="20"  y="175" class="axis-label">RDM</text>
+        <text x="5"   y="65" class="axis-label">GL</text>
+
+
+        <polygon 
+          points="100,35 165,75 150,150 55,150 35,75" 
+          class="values">
+        </polygon>
+
+      </svg>
+    </div>
+
+  </div>
+
+</aside>
+
+
 
 
 </body>
 
 </html>
-
-<div class="cours-container">
-
-  <a href="#" class="cours-card">
-    <img src="https://via.placeholder.com/150" alt="Illustration matière">
-    <h3>Equations de la physique</h3>
-
-    <div class="progress-track">
-      <div class="progress-bar" data-progress="70"></div>
-    </div>
-  </a>
-
-  <a href="#" class="cours-card">
-    <img src="https://via.placeholder.com/150" alt="Illustration matière">
-    <h3>Mécanique</h3>
-
-    <div class="progress-track">
-      <div class="progress-bar" data-progress="40"></div>
-    </div>
-  </a>
-
-  <a href="#" class="cours-card">
-    <img src="https://via.placeholder.com/150" alt="Illustration matière">
-    <h3>Résistances des matériaux</h3>
-
-    <div class="progress-track">
-      <div class="progress-bar" data-progress="85"></div>
-    </div>
-  </a>
-
-  <a href="genie_logiciel.html" class="cours-card">
-    <img src="https://via.placeholder.com/150" alt="Illustration matière">
-    <h3>Genie logiciel</h3>
-
-    <div class="progress-track">
-      <div class="progress-bar" data-progress="85"></div>
-    </div>
-  </a>
-</div>
-
-<script>
-  document.querySelectorAll('.progress-bar').forEach(bar => {
-    const target = bar.getAttribute('data-progress');
-    setTimeout(() => {
-      bar.style.width = target + "%";
-    }, 400);
-  });
-</script>
