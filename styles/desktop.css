@@ -46,3 +46,36 @@ body {
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
 
+    padding: 0;
+    margin: 0;
+}
+
+p{
+    color: black;
+}
+
+h{
+    color:rgb(43, 43, 200)
+}
+
+nav {
+  border-bottom: 1px solid black;
+}
+ 
+.crumbs ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+ 
+.crumb {
+  display: inline-block;
+}
+ 
+.crumb a::after {
+  display: inline-block;
+  color: #000;
+  content: ">";
+  font-size: 80%;
+  font-weight: bold;
+  padding: 0 3px;
+}
