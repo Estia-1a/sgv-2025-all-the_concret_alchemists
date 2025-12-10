@@ -20,7 +20,28 @@
         </ol>
     </nav>
 
+
     <header class="titre">
+        <div class="header-buttons">
+            <button id="btn-settings" type="button">
+                <img src="https://cdn-icons-png.flaticon.com/512/3524/3524636.png" alt="paramètres">
+                Paramètres
+
+            </button>
+            <div class="dropdown" id="settingsDropdown" aria-hidden="true">
+                <a href="#profil">Mon profil</a>
+                <a href="#compte">Compte</a>
+                <a href="#notifications">Notifications</a>
+                <a href="#apparence">Apparence</a>
+                <hr>
+                <a href="#aide">Aide</a>
+            </div>
+
+            <button id="btn-logout">
+                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828479.png" alt="déconnexion">
+                Déconnexion
+            </button>
+        </div>
         <h1>Génie Logiciel</h1>
         <p>Découvre comment analyser et définir correctement le besoin d’un futur logiciel avant de le développer.</p>
     </header>
@@ -112,6 +133,80 @@
     </main>
 
 
+    <!-- POPUP Déconnexion -->
+    <div class="modal" id="logoutModal" aria-hidden="true">
+        <div class="modal__overlay"></div>
+
+        <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="logoutTitle">
+            <h2 id="logoutTitle">Se déconnecter ?</h2>
+            <p>Tu vas être déconnecté de ton compte. Tu veux continuer ?</p>
+
+            <div class="modal__actions">
+                <button class="modal__btn modal__btn--cancel" id="logoutCancel" type="button">
+                    Annuler
+                </button>
+
+                <!-- Remplace le href par ta vraie page/route de déconnexion -->
+                <a class="modal__btn modal__btn--danger" id="logoutConfirm" href="#">
+                    Oui, me déconnecter
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const btnLogout = document.getElementById("btn-logout");
+        const modal = document.getElementById("logoutModal");
+        const overlay = modal.querySelector(".modal__overlay");
+        const btnCancel = document.getElementById("logoutCancel");
+
+        function openModal() {
+            modal.classList.add("is-open");
+            modal.setAttribute("aria-hidden", "false");
+        }
+
+        function closeModal() {
+            modal.classList.remove("is-open");
+            modal.setAttribute("aria-hidden", "true");
+        }
+
+        btnLogout.addEventListener("click", openModal);
+        overlay.addEventListener("click", closeModal);
+        btnCancel.addEventListener("click", closeModal);
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") closeModal();
+        });
+    </script>
+    <script>
+        const btnSettings = document.getElementById("btn-settings");
+        const dropdown = document.getElementById("settingsDropdown");
+
+        function toggleDropdown() {
+            dropdown.classList.toggle("is-open");
+            dropdown.setAttribute("aria-hidden", dropdown.classList.contains("is-open") ? "false" : "true");
+        }
+
+        function closeDropdown() {
+            dropdown.classList.remove("is-open");
+            dropdown.setAttribute("aria-hidden", "true");
+        }
+
+        btnSettings.addEventListener("click", (e) => {
+            e.stopPropagation();
+            toggleDropdown();
+        });
+
+        dropdown.addEventListener("click", (e) => {
+            e.stopPropagation();
+        });
+
+        document.addEventListener("click", closeDropdown);
+
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") closeDropdown();
+        });
+    </script>
 
 
 </body>
