@@ -45,8 +45,15 @@
         <h1>Génie Logiciel</h1>
         <p>Découvre comment analyser et définir correctement le besoin d’un futur logiciel avant de le développer.</p>
     </header>
-    <main>
-        <section class="objectif">
+    <nav class="section-nav" aria-label="Navigation de la page">
+        <a href="#objectif">Objectif</a>
+        <a href="#cours">Cours</a>
+        <a href="#exo">Exercice</a>
+        <a href="#correction">Correction</a>
+    </nav>
+
+    <main id="contenu">
+        <section class="objectif" id="objectif">
             <div class="text">
                 <h2>Objectif:</h2>
                 <ul>
@@ -65,7 +72,7 @@
             <img src="image/objectif.png" alt="objectif" class="img-section">
         </section>
 
-        <section class="cours">
+        <section class="cours" id="cours">
 
             <img src="image/reformulation_du_besoin.png" alt="reformulation du besoin" class="img-section">
             <div class="text">
@@ -81,7 +88,7 @@
             </div>
         </section>
 
-        <section class="exo">
+        <section class="exo" id="exo">
             <div class="exercice">
                 <h2>EXERCICE : Reformulation du besoin</h2>
                 <h3>Énoncé:</h3>
@@ -105,6 +112,7 @@
 
             <div class="exo_texte">
                 <form>
+                    <label class="sr-only" for="reponse">Ta réponse</label>
                     <textarea placeholder="TAPEZ VOTRE TEXTE..." rows="8" cols="40"></textarea>
                 </form>
 
@@ -116,7 +124,7 @@
 
 
 
-        <section class="correction">
+        <section class="correction" id="correction">
             <h2>CORRECTION : reformulation du besoin</h2>
             <details>
                 <summary>
