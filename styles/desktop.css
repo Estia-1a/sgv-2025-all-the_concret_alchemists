@@ -12,7 +12,6 @@ body {
     padding: 20px;
 }
 
-
 .breadcrumbs {
     margin-bottom: 15px;
 }
@@ -39,7 +38,6 @@ body {
 .breadcrumbs li:last-child::after {
     content: "";
 }
-
 
 .page-header {
     display: flex;
@@ -83,7 +81,6 @@ body {
     height: 18px;
 }
 
-
 .intro {
     background: #ffffff;
     padding: 16px;
@@ -93,15 +90,32 @@ body {
 }
 
 
+.dashboard-layout{
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+
+.dashboard-left{
+    width: 240px;
+    flex: 0 0 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+
 .side-menu {
     background: #ffffff;
     padding: 16px;
     border-radius: 10px;
     width: 240px;
-    float: left;
+    
+    float: none;
     box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    margin-right: 25px;
-    margin-bottom: 25px;
+    margin-right: 0;
+    margin-bottom: 0;
 }
 
 .side-menu h2 {
@@ -128,13 +142,15 @@ body {
     color: #0ea5e9;
 }
 
-.left-panel {
-    float: left;
-    flex: 1 1 240px;
-    max-width: 240px ;
-    margin-right: 25px;
-}
 
+.left-panel {
+    
+    float: none;
+    flex: unset;
+    max-width: none;
+    margin-right: 0;
+    width: 100%;
+}
 
 .profil-card {
     background: #ffffff;
@@ -142,7 +158,6 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
-
 
 .profil-header {
     display: flex;
@@ -178,8 +193,6 @@ body {
     color: #1e293b;
 }
 
-
-
 .radar-chart {
     width: 100%;
     margin-top: 10px;
@@ -190,20 +203,17 @@ body {
     height: 220px;
 }
 
-
 .radar-chart .grid {
     fill: none;
     stroke: #cbd5e1;
     stroke-width: 1.3;
 }
 
-
 .axis-label {
     font-size: 11px;
     fill: #334155;
     text-anchor: middle;
 }
-
 
 .values {
     fill: rgba(14,165,233,0.35);
@@ -246,19 +256,24 @@ body {
 }
 
 
+main{
+    flex: 1;
+    min-width: 0;
+}
+
 main h2 {
     margin-bottom: 15px;
     font-size: 22px;
     color: #1e293b;
 }
 
+
 .cours-container {
-    margin-left: 265px; 
+    margin-left: 0;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
-
 
 .cours-card {
     display: flex;
@@ -292,7 +307,6 @@ main h2 {
     font-size: 18px;
     font-weight: 600;
 }
-
 
 .progress-track {
     width: 100%;
