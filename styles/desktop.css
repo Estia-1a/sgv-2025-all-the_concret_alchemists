@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -102,6 +101,7 @@ body {
     float: left;
     box-shadow: 0 4px 12px rgba(0,0,0,0.06);
     margin-right: 25px;
+    margin-bottom: 25px;
 }
 
 .side-menu h2 {
@@ -126,6 +126,99 @@ body {
 
 .side-menu a:hover {
     color: #0ea5e9;
+}
+
+.left-panel {
+    float: left;
+    flex: 1 1 240px;
+    max-width: 240px ;
+    margin-right: 25px;
+}
+
+
+.profil-card {
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+
+.profil-header {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.profil-header img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profil-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #1e293b;
+    font-weight: 700;
+}
+
+.profil-header p {
+    margin: 0;
+    font-size: 14px;
+    color: #475569;
+}
+
+.profil-card h4 {
+    margin-top: 10px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #1e293b;
+}
+
+
+
+.radar-chart {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.radar-chart svg {
+    width: 100%;
+    height: 220px;
+}
+
+
+.radar-chart .grid {
+    fill: none;
+    stroke: #cbd5e1;
+    stroke-width: 1.3;
+}
+
+
+.axis-label {
+    font-size: 11px;
+    fill: #334155;
+    text-anchor: middle;
+}
+
+
+.values {
+    fill: rgba(14,165,233,0.35);
+    stroke: #0ea5e9;
+    stroke-width: 2;
+    transition: .3s ease;
+}
+
+.values:hover {
+    fill: rgba(14,165,233,0.55);
+}
+
+.visually-hidden {
+    position: absolute;
+    left: -9999px;
 }
 
 .search-box {
@@ -219,95 +312,3 @@ main h2 {
 
 
 
-.right-panel {
-    float: right;
-    flex: 1 1 260px;
-    max-width: 260px ;
-    margin: 0;
-}
-
-
-.profil-card {
-    background: #ffffff;
-    padding: 16px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-
-.profil-header {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 15px;
-    align-items: center;
-}
-
-.profil-header img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.profil-header h3 {
-    margin: 0;
-    font-size: 18px;
-    color: #1e293b;
-    font-weight: 700;
-}
-
-.profil-header p {
-    margin: 0;
-    font-size: 14px;
-    color: #475569;
-}
-
-.profil-card h4 {
-    margin-top: 10px;
-    margin-bottom: 8px;
-    font-size: 16px;
-    color: #1e293b;
-}
-
-
-
-.radar-chart {
-    width: 100%;
-    margin-top: 10px;
-}
-
-.radar-chart svg {
-    width: 100%;
-    height: 220px;
-}
-
-
-.radar-chart .grid {
-    fill: none;
-    stroke: #cbd5e1;
-    stroke-width: 1.3;
-}
-
-
-.axis-label {
-    font-size: 11px;
-    fill: #334155;
-    text-anchor: middle;
-}
-
-
-.values {
-    fill: rgba(14,165,233,0.35);
-    stroke: #0ea5e9;
-    stroke-width: 2;
-    transition: .3s ease;
-}
-
-.values:hover {
-    fill: rgba(14,165,233,0.55);
-}
-
-.visually-hidden {
-    position: absolute;
-    left: -9999px;
-}
