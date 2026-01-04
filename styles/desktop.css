@@ -12,7 +12,6 @@ body {
     padding: 20px;
 }
 
-
 .breadcrumbs {
     margin-bottom: 15px;
 }
@@ -39,7 +38,6 @@ body {
 .breadcrumbs li:last-child::after {
     content: "";
 }
-
 
 .page-header {
     display: flex;
@@ -83,13 +81,28 @@ body {
     height: 18px;
 }
 
-
 .intro {
     background: #ffffff;
     padding: 16px;
     border-radius: 10px;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
     margin-bottom: 25px;
+}
+
+
+.dashboard-layout{
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+
+.dashboard-left{
+    width: 240px;
+    flex: 0 0 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
 }
 
 
@@ -98,9 +111,11 @@ body {
     padding: 16px;
     border-radius: 10px;
     width: 240px;
-    float: left;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    margin-right: 25px;
+    
+    float: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    margin-right: 0;
+    margin-bottom: 0;
 }
 
 .side-menu h2 {
@@ -127,112 +142,22 @@ body {
     color: #0ea5e9;
 }
 
-.search-box {
-    margin: 10px 0 25px 0;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
 
-.search-box input {
-    flex: 1;
-    padding: 10px 12px;
-    border-radius: 8px;
-    border: 1px solid #cbd5e1;
-    font-size: 14px;
-}
-
-.search-box button {
-    padding: 10px 12px;
-    border-radius: 8px;
-    border: none;
-    background: #0ea5e9;
-    color: white;
-    cursor: pointer;
-}
-
-
-main h2 {
-    margin-bottom: 15px;
-    font-size: 22px;
-    color: #1e293b;
-}
-
-.cours-container {
-    margin-left: 265px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-
-.cours-card {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 250px;
-    gap: 12px;
-    background: #ffffff;
-    max-width: 260px;
-    padding: 16px;
-    border-radius: 12px;
-    text-decoration: none;
-    color: #0f172a;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-    transition: 0.2s ease;
-}
-
-.cours-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-}
-
-.cours-card img {
+.left-panel {
+    
+    float: none;
+    flex: unset;
+    max-width: none;
+    margin-right: 0;
     width: 100%;
-    height: 120px;
-    border-radius: 8px;
-    object-fit: cover;
 }
-
-.cours-card h3 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-
-.progress-track {
-    width: 100%;
-    height: 10px;
-    background: #e2e8f0;
-    border-radius: 6px;
-    overflow: hidden;
-}
-
-.progress-bar {
-    height: 100%;
-    width: 0%;
-    background: linear-gradient(90deg, #06b6d4, #22d3ee);
-    border-radius: 6px;
-    transition: width 1s ease;
-}
-
-
-
-.right-panel {
-    float: right;
-    flex: 1 1 260px;
-    max-width: 260px;
-    margin: 0;
-}
-
 
 .profil-card {
     background: #ffffff;
     padding: 16px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
-
 
 .profil-header {
     display: flex;
@@ -268,8 +193,6 @@ main h2 {
     color: #1e293b;
 }
 
-
-
 .radar-chart {
     width: 100%;
     margin-top: 10px;
@@ -280,13 +203,11 @@ main h2 {
     height: 220px;
 }
 
-
 .radar-chart .grid {
     fill: none;
     stroke: #cbd5e1;
     stroke-width: 1.3;
 }
-
 
 .axis-label {
     font-size: 11px;
@@ -294,16 +215,15 @@ main h2 {
     text-anchor: middle;
 }
 
-
 .values {
-    fill: rgba(14, 165, 233, 0.35);
+    fill: rgba(14,165,233,0.35);
     stroke: #0ea5e9;
     stroke-width: 2;
     transition: .3s ease;
 }
 
 .values:hover {
-    fill: rgba(14, 165, 233, 0.55);
+    fill: rgba(14,165,233,0.55);
 }
 
 .visually-hidden {
@@ -311,160 +231,95 @@ main h2 {
     left: -9999px;
 }
 
-/* ====== MODAL Déconnexion ====== */
-.modal {
-    position: fixed;
-    inset: 0;
-    display: none;
-    z-index: 9999;
-}
-
-.modal.is-open {
-    display: block;
-}
-
-.modal__overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-}
-
-.modal__box {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: min(520px, 92vw);
-    background: #fff;
-    border-radius: 12px;
-    padding: 18px 18px 16px;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
-}
-
-.modal__box h2 {
-    font-size: 1.25rem;
-    margin-bottom: 6px;
-    color: #111;
-}
-
-.modal__box p {
-    margin-bottom: 14px;
-    color: #444;
-    text-align: left;
-}
-
-.modal__actions {
+.search-box {
+    margin: 10px 0 25px 0;
     display: flex;
-    gap: 12px;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-}
-
-.modal__btn {
-    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    padding: 10px 14px;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    text-decoration: none;
-    cursor: pointer;
-    border: 1px solid transparent;
-    transition: 0.15s;
+    gap: 8px;
 }
 
-/* Bouton gris (Annuler) */
-.modal__btn--cancel {
-    background: #f1f5f9;
-    color: #0f172a;
-    border-color: #cbd5e1;
-}
-
-.modal__btn--cancel:hover {
-    background: #e2e8f0;
-}
-
-/* Bouton action (Déconnexion) */
-.modal__btn--danger {
-    background: #dc2626;
-    color: #fff;
-}
-
-.modal__btn--danger:hover {
-    filter: brightness(0.95);
-}
-
-.modal__btn:focus {
-    outline: 3px solid rgba(59, 130, 246, 0.25);
-    outline-offset: 3px;
-}
-
-/* Mobile: boutons en colonne si besoin */
-@media (max-width: 480px) {
-    .modal__actions {
-        justify-content: stretch;
-    }
-
-    .modal__btn {
-        width: 100%;
-    }
-}
-
-/* ===== Dropdown Paramètres ===== */
-.header-buttons {
-    position: relative;
-    /* pour ancrer le menu */
-}
-
-.dropdown {
-    position: absolute;
-    top: calc(100% + 10px);
-    right: 0;
-    width: 220px;
-    background: #fff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
-    padding: 8px;
-    display: none;
-    z-index: 9999;
-}
-
-.dropdown.is-open {
-    display: block;
-}
-
-/* petite flèche */
-.dropdown::before {
-    content: "";
-    position: absolute;
-    top: -7px;
-    right: 16px;
-    width: 12px;
-    height: 12px;
-    background: #fff;
-    border-left: 1px solid #e2e8f0;
-    border-top: 1px solid #e2e8f0;
-    transform: rotate(45deg);
-}
-
-.dropdown a {
-    display: block;
-    padding: 10px 10px;
-    border-radius: 10px;
-    text-decoration: none;
-    color: #0f172a;
-    font-weight: 600;
+.search-box input {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
     font-size: 14px;
 }
 
-.dropdown a:hover {
-    background: #f1f5f9;
+.search-box button {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: none;
+    background: #0ea5e9;
+    color: white;
+    cursor: pointer;
 }
 
-.dropdown hr {
-    border: none;
-    border-top: 1px solid #e2e8f0;
-    margin: 6px 6px;
+
+main{
+    flex: 1;
+    min-width: 0;
+}
+
+main h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #1e293b;
+}
+
+
+.cours-container {
+    margin-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cours-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 250px;
+    gap: 12px;
+    background: #ffffff;
+    max-width: 260px;
+    padding: 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #0f172a;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    transition: 0.2s ease;
+}
+
+.cours-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.cours-card img {
+    width: 100%;
+    height: 120px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.cours-card h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.progress-track {
+    width: 100%;
+    height: 10px;
+    background: #e2e8f0;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #06b6d4, #22d3ee);
+    border-radius: 6px;
+    transition: width 1s ease;
 }
